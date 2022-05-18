@@ -1,0 +1,92 @@
+secret.json
+db.sqlite*
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+
+# C extensions
+*.so
+
+# Distribution / packaging
+bin/
+build/
+develop-eggs/
+dist/
+eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Unit test / coverage reports
+.tox/
+.coverage
+.cache
+nosetests.xml
+coverage.xml
+
+# Translations
+*.mo
+
+# Mr Developer
+.mr.developer.cfg
+.project
+.pydevproject
+
+# Rope
+.ropeproject
+
+# Django stuff:
+*.log
+*.pot
+
+# Sphinx documentation
+docs/_build/
+Share
+Edit
+Follow
+edited Jan 24, 2014 at 15:40
+user avatar
+Stephen Fuhry
+11.9k66 gold badges5151 silver badges5555 bronze badges
+answered Dec 27, 2012 at 16:58
+user avatar
+seanrose
+7,23533 gold badges1818 silver badges2121 bronze badges
+1
+why should we ignore *.mo files? just for curiosity. are those gettext's .po files compiled on server separately ? – 
+Ekin Ertaç
+ Mar 14, 2016 at 12:07
+6
+.mo files are the machine readable (binary) version of the .po files, and -as widely known- it's a lot better to keep binary files outside of a versioned repository, when you can (and you should, since including both .po and .mo means also keeping duplicated data in the repository, that the VCS cannot even "squash") – 
+dappiu
+ Jun 16, 2016 at 23:26
+7
+Why not .DS_Store? – 
+MaxCore
+ Dec 5, 2018 at 20:00
+Add a comment
+
+86
+
+When using buildout I have following in .gitignore (along with *.pyo and *.pyc):
+
+.installed.cfg
+bin
+develop-eggs
+dist
+downloads
+eggs
+parts
+src/*.egg-info
+lib
+lib64
