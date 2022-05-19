@@ -10,6 +10,13 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.0/ref/settings/
 """
 
+'''
+Problem shooting
+1. How could I enable internal internet connect to the server?
+    - use 'python manage.py runserver 0.0.0.0:8000'
+    - input http://<your-server-ip>:<port>
+'''
+
 from pathlib import Path
 import os
 import json
@@ -26,7 +33,7 @@ try:
         SECRET_json = json.load(f)
     SECRET_KEY = SECRET_json['SECRET_KEY']
 except:
-    SECRET_KEY = None
+    SECRET_KEY = 'justfortest'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
