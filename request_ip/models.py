@@ -19,3 +19,10 @@ class ipInfo(models.Model):
             print('address/netmask is invalid: {}'.format(self.server_ipv4))
         except:
             print('Usage : {}  ip'.format(self.server_ipv4))
+        
+    def delete_everything(self):
+        ipInfo.objects.all().delete()
+
+    def delete_filter(self, filter):
+        # filt out objects fit the filter's condition
+        pass
