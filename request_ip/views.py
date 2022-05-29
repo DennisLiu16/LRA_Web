@@ -6,9 +6,9 @@ from .forms import ipInfoForm
 
 import ipaddress
 
-
 # debug
 from prettytable import PrettyTable
+import socket
 
 def index(request):
     # using Form

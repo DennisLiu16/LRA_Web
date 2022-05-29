@@ -1,6 +1,4 @@
-from attr import attr
 from django import forms
-from matplotlib.widgets import Widget
 from .models import ipInfo
 
 # https://www.learncodewithmike.com/2020/03/django-modelform.html
